@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    background-color: #333;
+    font: 30px 'Arial';
+}
+
+#csCircles{
+    display: none;
+}
+#lkCircles{
+    cursor: pointer;
+}
+#lkCircles:hover {
+    color: blue;
+}
+#main{
+    margin: 0.5em auto 0 1em;
+}
