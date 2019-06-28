@@ -1,16 +1,16 @@
 body {
     margin: 0;
-    background-color: #333;
+    background: #333;
     font: 30px 'Arial';
 }
 
 #csCircles{
     display: none;
 }
-#lkCircles{
+#main a{
     cursor: pointer;
 }
-#lkCircles:hover {
+#main a:hover {
     color: blue;
 }
 #main{
