@@ -5,15 +5,18 @@ body {
 }
 
 #csCircles{
-    /* display: none; */
+    display: none;
 }
-#main a{
+a{
     cursor: pointer;
 }
-#main a:hover {
+a:hover {
     color: blue;
 }
 #main{
+    margin: 0.5em auto 0 1em;
+}
+#runeKeyboardWrapper {
     display: none;
     margin: 0.5em auto 0 1em;
 }

@@ -1,4 +1,4 @@
-let running = true;
+let running = false;
 $(document).ready(function () {
     let textMarginTop = 30;
     let maxCircleRadius = 30;
