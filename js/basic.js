@@ -1,12 +1,16 @@
 $('#lkCircles').on('click', function () {
     $('#main').toggle();
-    $('#csCircles').toggle();
-    $('body').css('overflow-y', 'hidden');
+    $('#csCircles').css('display', 'block');
     running = true;
 });
 $('#lkRuneKeyaboard').on('click', function () {
     $('#main').hide();
     $('#runeKeyboardWrapper').show();
+});
+$('#lkFibonacci').on('click', function () {
+    $('#main').hide();
+    $('#csFibonacci').css('display', 'block');
+    fibInit();
 });
 $('.lkBack').on('click', function () {
     $('#main').show();

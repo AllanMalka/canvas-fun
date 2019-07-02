@@ -86,7 +86,7 @@ $(document).ready(function () {
                 // RefreshCanvasCircle();
                 $('#csCircles').toggle();
                 $('#main').toggle();
-                $('body').css('overflow-y', 'auto');
+                $('body').css('cursor', '');
             } else if (atClear) {
                 circlesArray = [];
                 amountstrokes = 0;
@@ -98,14 +98,16 @@ $(document).ready(function () {
                     amountadding += addHundred ? 100 : 0;
                     if (maxAmountOfCircles > 0)
                         amountadding = caLength + amountadding > maxAmountOfCircles ? Math.abs(maxAmountOfCircles - caLength) : amountadding;
-
-                    for (let i = 0; i < amountadding; i++) {
-                        let minCircleRadius = MathRandom(1, 15);
-                        let velocityy = (Math.random() - 0.5) * 5;
-                        let velocityx = (Math.random() - 0.5) * 5;
-                        let addstroke = MathRandom(1, 10) == 10;
-                        amountstrokes = addstroke ? amountstrokes + 1 : amountstrokes;
-                        circlesArray.push(new Circle(mouse.x, mouse.y, velocityx, velocityy, minCircleRadius, addstroke));
+                    let nodraw = mouse.y - 15 < menuRect.h && mouse.x - 15 < menuRect.w;
+                    if (!nodraw) {
+                        for (let i = 0; i < amountadding; i++) {
+                            let minCircleRadius = MathRandom(1, 15);
+                            let velocityy = (Math.random() - 0.5) * 5;
+                            let velocityx = (Math.random() - 0.5) * 5;
+                            let addstroke = MathRandom(1, 10) == 10;
+                            amountstrokes = addstroke ? amountstrokes + 1 : amountstrokes;
+                            circlesArray.push(new Circle(mouse.x, mouse.y, velocityx, velocityy, minCircleRadius, addstroke));
+                        }
                     }
                 }, 1);
             }
@@ -225,7 +227,7 @@ $(document).ready(function () {
                 velY = -velY;
 
 
-            if(animateY - circleSize < menuRect.h && animateX - circleSize < menuRect.w) {
+            if (animateY - circleSize < menuRect.h && animateX - circleSize < menuRect.w) {
                 velX = -velX;
                 velY = -velY;
             }
@@ -275,6 +277,7 @@ $(document).ready(function () {
         ctx.fillStyle = txtPrimCol;
         MsgRunPause();
     }
+
     function drawMenu() {
         ctx.shadowOffsetX = 0;
         ctx.shadowOffsetY = 0;
