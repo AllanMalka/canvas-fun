@@ -253,9 +253,6 @@ $(document).ready(function () {
         ctx.fillText(txt, 210, textMarginTop);
     }
 
-    function MathRandom(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
 
     function initTxt() {
         ctx.shadowOffsetX = 3;

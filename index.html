@@ -18,15 +18,18 @@
 </head>
 
 <body>
+    <script src="js/three.js"></script>
     <div id="main">
         <a id="lkCircles">Circles Canvas</a> 
         | 
         <a id="lkRuneKeyaboard">Runic Keyboard</a>
         | 
         <a id="lkFibonacci">Fibonacci</a>
+        | 
+        <a id="lkCanvas3d">Canvas 3D</a>
     </div>
     <div id="runeKeyboardWrapper">
-        <a class="lkBack">Home</a>
+        <a id="lkRuneBack">Home</a>
         <div>
             Runic keyboard
         </div>
@@ -35,11 +38,14 @@
     </div>
     <canvas id="csCircles"></canvas>
     <canvas id="csFibonacci"></canvas>
+    <canvas id="csCanvas3d"></canvas>
+
 
     <script src="js/basic.js"></script>
     <script src="js/circles.js"></script>
     <script src="js/fibonacci.js"></script>
     <script src="js/runeKeyboard.js"></script>
+    <script src="js/scene.js"></script>
 </body>
 
 </html>

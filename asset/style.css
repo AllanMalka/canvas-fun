@@ -4,9 +4,9 @@ body {
     font: 30px 'Arial';
 }
 
-#csCircles{
+/* #csCircles{
     display: none;
-}
+} */
 a{
     cursor: pointer;
 }
@@ -14,12 +14,17 @@ a:hover {
     color: blue;
 }
 #main{
+    display: none;
     margin: 0.5em auto 0 1em;
 }
 #runeKeyboardWrapper {
     display: none;
     margin: 0.5em auto 0 1em;
 }
-#csFibonacci {
+canvas {
     display: none;
+}
+
+#csCanvas3d {
+    display: block;
 }
