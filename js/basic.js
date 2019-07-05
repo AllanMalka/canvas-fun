@@ -31,7 +31,7 @@ const MathRandom = (min, max) => {
 // start canvas
 $(document).ready(function () {
 
-    sceneInit();
+    // init();
 
     // fibInit();
 });
